@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <img src="asset/unilogo.png" alt="Logo" class="h-14 w-14">
+          <div>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">University of Swat</h1>
+            <p class="text-xs text-gray-500">Aspiring for Quality Education with Relevance</p>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+    
+        <!-- Nav + Search -->
+        <div id="menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 w-full lg:w-auto lg:ml-auto mt-4 lg:mt-0">
+    
+          <!-- Navigation Links -->
+          <nav class="flex flex-col lg:flex-row items-center gap-3 text-3sm font-bold">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="#" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">Admissions</a>
+            <a href="#" class="hover:text-blue-600">Academics</a>
+            <a href="#" class="hover:text-blue-600">News</a>
+            <a href="#" class="hover:text-blue-600">Contact</a>
+          </nav>
+    
+          <!-- Search Bar -->
+          <div class="relative w-full sm:w-60">
+            <input type="text" placeholder="Search..."
+              class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+             <!-- Top Navigation with Dropdowns -->
+<nav class="bg-white text-blue-900 text-sm font-medium px-6 py-2 shadow-md border-b-2 border-blue-300 pb-2">
+  <ul class="flex flex-wrap justify-center gap-6 relative">
+    
+    <li class="group relative" id="campus-menu">
+      <button onclick="toggleDropdown()" class="hover:text-blue-600">Campuses</button>
+      <ul id="campus-dropdown" class="absolute hidden bg-white text-left shadow-lg rounded-md mt-2 z-10 w-44">
+        <li><a href="main.html" class="block px-4 py-2 hover:bg-blue-100">Main Campus</a></li>
+        <li><a href="womenc.html" class="block px-4 py-2 hover:bg-blue-100">Women Campus</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Shangla Campus</a></li>
+      </ul>
+    </li>
+    
+    <!-- Faculty -->
+<li class="group relative" id="faculty-menu">
+  <button onclick="toggleFacultyDropdown()" class="hover:text-blue-600">Faculty</button>
+  <ul id="faculty-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-48">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Science & Tech</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Arts & Humanities</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Social Sciences</a></li>
+  </ul>
+</li>
+
+
+  <!-- Administration -->
+<li class="group relative" id="admin-menu">
+  <button onclick="toggleAdminDropdown()" class="hover:text-blue-600">Administration</button>
+  <ul id="admin-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">VC Office</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Registrar</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Treasurer</a></li>
+  </ul>
+</li>
+
+
+
+
+
+
+   <!-- Downloads -->
+  <li><a href="downloads.html" class="hover:text-blue-600">Downloads</a></li>
+
+  <!-- Exam -->
+  <li><a href="exam.html" class="hover:text-blue-600">Exam</a></li>
+
+  <!-- Alumni -->
+  <li><a href="hunerkada.html" class="hover:text-blue-600">Alumni</a></li>
+
+  <!-- YDC -->
+  <li><a href="ydc.html" class="hover:text-blue-600">YDC</a></li>
+
+   <!-- Online Services -->
+<li class="group relative" id="services-menu">
+  <button onclick="toggleServicesDropdown()" class="hover:text-blue-600">Online Services</button>
+  <ul id="services-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">LMS</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Student Portal</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Fee Payment</a></li>
+  </ul>
+</li>
+
+    <!-- Hunerkada -->
+    <li><a href="hunerkada.html" class="hover:text-blue-600">Hunerkada</a></li>
+
+  </ul>
+</nav>
+    </header>  
+
+
+
+    <section class="bg-gray-50 py-16 px-4 md:px-20 text-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-blue-900 text-center mb-12">Contact Us</h2>
+    
+        <!-- Offices Contact List -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold text-blue-800 mb-6">Offices Contact List</h3>
+          <div class="overflow-x-auto shadow rounded-lg">
+            <table class="w-full table-auto border-collapse">
+              <thead class="bg-blue-100 text-blue-900">
+                <tr>
+                  <th class="px-4 py-3 text-left">S.#</th>
+                  <th class="px-4 py-3 text-left">Office</th>
+                  <th class="px-4 py-3 text-left">Tel. No.</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white">
+                <tr><td class="px-4 py-2">1</td><td>VC Office</td><td>730510</td></tr>
+                <tr><td class="px-4 py-2">2</td><td>PS to VC Office</td><td>920811-12</td></tr>
+                <tr><td class="px-4 py-2">3</td><td>Registrar Office</td><td>920813</td></tr>
+                <tr><td class="px-4 py-2">4</td><td>PS to Registrar Office</td><td>920814</td></tr>
+                <tr><td class="px-4 py-2">5</td><td>Deputy Registrar (Meetings)</td><td>920860</td></tr>
+                <tr><td class="px-4 py-2">6</td><td>Meeting Section (Registrar Office)</td><td>902859</td></tr>
+                <tr><td class="px-4 py-2">7</td><td>Assistant Registrar (Litigation Office)</td><td>920854</td></tr>
+                <tr><td class="px-4 py-2">8</td><td>Treasurer Office</td><td>920857</td></tr>
+                <tr><td class="px-4 py-2">9</td><td>Deputy Treasurer</td><td>920816</td></tr>
+                <tr><td class="px-4 py-2">10</td><td>Audit Office (DDA)</td><td>920858</td></tr>
+                <tr><td class="px-4 py-2">11</td><td>Deputy Director Account (DDA)</td><td>920817</td></tr>
+                <tr><td class="px-4 py-2">12</td><td>Admission Office</td><td>920809</td></tr>
+                <tr><td class="px-4 py-2">13</td><td>Administrative Officer</td><td>920855</td></tr>
+                <tr><td class="px-4 py-2">14</td><td>Director P&D Office</td><td>920852</td></tr>
+                <tr><td class="px-4 py-2">15</td><td>Director Works</td><td>730505</td></tr>
+                <tr><td class="px-4 py-2">16</td><td>Director DORIC</td><td>730527</td></tr>
+                <tr><td class="px-4 py-2">17</td><td>Project Director (Women Campus)</td><td>920853</td></tr>
+                <tr><td class="px-4 py-2">18</td><td>Director IT</td><td>920810</td></tr>
+                <tr><td class="px-4 py-2">19</td><td>Store Office</td><td>920815</td></tr>
+                <tr><td class="px-4 py-2">20</td><td>Controller of Examinations</td><td>920831</td></tr>
+                <tr><td class="px-4 py-2">21</td><td>Examination Section (Window)</td><td>730521</td></tr>
+                <tr><td class="px-4 py-2">22</td><td>Degree / Secrecy Exam</td><td>920832</td></tr>
+                <tr><td class="px-4 py-2">23</td><td>Computer Cell / Exam</td><td>920833</td></tr>
+                <tr><td class="px-4 py-2">24</td><td>Exam Conduct Section</td><td>920834</td></tr>
+                <tr><td class="px-4 py-2">25</td><td>Women Campus</td><td>920867-68</td></tr>
+                <tr><td class="px-4 py-2">26</td><td>Centre for Education and Staff Training</td><td>730533</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    
+        <!-- Departments Contact List -->
+        <div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-6">Departments Contact List</h3>
+          <div class="overflow-x-auto shadow rounded-lg">
+            <table class="w-full table-auto border-collapse">
+              <thead class="bg-blue-100 text-blue-900">
+                <tr>
+                  <th class="px-4 py-3 text-left">S.#</th>
+                  <th class="px-4 py-3 text-left">Department</th>
+                  <th class="px-4 py-3 text-left">Tel. No.</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white">
+                <tr><td class="px-4 py-2">1</td><td>Girls Hostel</td><td>920818-19</td></tr>
+                <tr><td class="px-4 py-2">2</td><td>Guest House</td><td>920820</td></tr>
+                <tr><td class="px-4 py-2">3</td><td>Canteen (Cafeteria)</td><td>920823</td></tr>
+                <tr><td class="px-4 py-2">4</td><td>Central Library</td><td>920825</td></tr>
+                <tr><td class="px-4 py-2">5</td><td>Center for Management and Commerce</td><td>920826</td></tr>
+                <tr><td class="px-4 py-2">6</td><td>Centre for Caucasian, Asian, Chinese and Pakistan Studies</td><td>920827</td></tr>
+                <tr><td class="px-4 py-2">7</td><td>Department of Social and Gender Studies</td><td>920829</td></tr>
+                <tr><td class="px-4 py-2">8</td><td>Center for Plant Sciences (Botany)</td><td>920835</td></tr>
+                <tr><td class="px-4 py-2">9</td><td>Center for Biotechnology & Microbiology</td><td>920836</td></tr>
+                <tr><td class="px-4 py-2">10</td><td>Department of Psychological Sciences</td><td>920837</td></tr>
+                <tr><td class="px-4 py-2">11</td><td>Center for Animal Sciences and Fisheries</td><td>920838</td></tr>
+                <tr><td class="px-4 py-2">12</td><td>Department of Forensic Sciences</td><td>920839</td></tr>
+                <tr><td class="px-4 py-2">13</td><td>Institute of Agriculture Sciences and Forestry</td><td>920840</td></tr>
+                <tr><td class="px-4 py-2">14</td><td>Department of Economics & Development Studies</td><td>920841</td></tr>
+                <tr><td class="px-4 py-2">15</td><td>Department of Mathematics and Statistics</td><td>920842</td></tr>
+                <tr><td class="px-4 py-2">16</td><td>Media & Communication Studies (Radio 920856)</td><td>920843</td></tr>
+                <tr><td class="px-4 py-2">17</td><td>Dept. of Computer & Software Tech. (HOD)</td><td>920844</td></tr>
+                <tr><td class="px-4 py-2">18</td><td>Computer & Software Tech. (Clerk)</td><td>920845</td></tr>
+                <tr><td class="px-4 py-2">19</td><td>Institute of Chemical Sciences</td><td>920846</td></tr>
+                <tr><td class="px-4 py-2">20</td><td>Environmental Sciences</td><td>920847</td></tr>
+                <tr><td class="px-4 py-2">21</td><td>Physical & Material Sciences</td><td>920848</td></tr>
+                <tr><td class="px-4 py-2">22</td><td>Islamic and Arabic Studies</td><td>920849</td></tr>
+                <tr><td class="px-4 py-2">23</td><td>Law and Shariah</td><td>920850</td></tr>
+                <tr><td class="px-4 py-2">24</td><td>ICHTHM (Tourism)</td><td>920851</td></tr>
+                <tr><td class="px-4 py-2">25</td><td>Education and Staff Training</td><td>920871 / 730533</td></tr>
+                <tr><td class="px-4 py-2">26</td><td>HUNERKADA</td><td>920876</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    
+    
+
+
+
+    <!-- Info & Footer Section -->
+<section class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-gray-800">
+      
+      <!-- Recent Posts -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Recent Posts</h3>
+        <ul class="space-y-2">
+          <li><strong>4th Convocation 2025</strong><br><span class="text-gray-500 text-xs">July 24, 2025</span></li>
+          <li><strong>Digital Transformation of Payment</strong><br><span class="text-gray-500 text-xs">July 23, 2025</span></li>
+          <li><strong>Re-Tender for Procurement of Odoo License</strong><br><span class="text-gray-500 text-xs">July 21, 2025</span></li>
+          <li><strong>International Conference on Bioscience Innovation</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+          <li><strong>Meeting of the Senate 2025</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+        </ul>
+      </div>
+  
+      <!-- About Us -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">About Us</h3>
+        <p class="text-justify text-sm">
+          University of Swat was established for providing higher education to the people of Swat Valley specifically and the whole of the country generally.
+        </p>
+        <p class="text-justify text-sm mt-2">
+          Since its establishment in July 2010, the university has made tremendous progress in academics, research, and infrastructure. Starting with only 7 disciplines, it now offers more than 28 programs.
+        </p>
+      </div>
+  
+      <!-- Reach Us -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Reach Us</h3>
+        <p class="text-sm">📍 <strong>Main Campus:</strong> Charbagh</p>
+        <p class="text-sm mt-2">University of Swat<br>Charbagh, Swat<br>Khyber Pakhtunkhwa, Pakistan</p>
+      </div>
+  
+      <!-- Quick Menu -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Quick Menu</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-600">Digital Learning & Skills Enrichment Initiative</a></li>
+          <li><a href="#" class="hover:text-blue-600">About University</a></li>
+          <li><a href="#" class="hover:text-blue-600">Announcements</a></li>
+          <li><a href="#" class="hover:text-blue-600">Jobs</a></li>
+          <li><a href="#" class="hover:text-blue-600">Events</a></li>
+          <li><a href="#" class="hover:text-blue-600">Tender</a></li>
+          <li><a href="#" class="hover:text-blue-600">Political Map of Pakistan</a></li>
+          <li><a href="#" class="hover:text-blue-600">Hunerkada (Art & Culture)</a></li>
+          <li><a href="#" class="hover:text-blue-600">Public Sector Affiliated Colleges</a></li>
+          <li><a href="#" class="hover:text-blue-600">Private Sector Affiliated Colleges</a></li>
+          <li><a href="#" class="hover:text-blue-600">Sub Campuses</a></li>
+          <li><a href="#" class="hover:text-blue-600">Women Campus</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="bg-blue-900 text-white mt-10">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+  
+      <!-- Info Section -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="text-lg font-semibold">© 2025 UNIVERSITY OF SWAT</p>
+        <p class="text-gray-300 mt-2">Web Administrator</p>
+        <p class="text-gray-400 text-xs mt-4">Best viewed in Google Chrome</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Quick Links</h3>
+        <ul class="space-y-1 text-gray-300">
+          <li><a href="#" class="hover:text-white transition">Digital Learning & Skills Enrichment</a></li>
+          <li><a href="#" class="hover:text-white transition">About University</a></li>
+          <li><a href="#" class="hover:text-white transition">Announcements</a></li>
+          <li><a href="#" class="hover:text-white transition">Latest News</a></li>
+          <li><a href="#" class="hover:text-white transition">Jobs</a></li>
+          <li><a href="#" class="hover:text-white transition">Events</a></li>
+          <li><a href="#" class="hover:text-white transition">Tender</a></li>
+          <li><a href="#" class="hover:text-white transition">Political Map of Pakistan</a></li>
+          <li><a href="#" class="hover:text-white transition">Hunerkada (Art & Culture)</a></li>
+          <li><a href="#" class="hover:text-white transition">Public Sector Colleges</a></li>
+          <li><a href="#" class="hover:text-white transition">Private Sector Colleges</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Follow Us</h3>
+        <div class="flex space-x-4 text-gray-300">
+          <a href="#" class="hover:text-white transition" title="Facebook">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">📘 Facebook</span>
+          </a>
+          <a href="#" class="hover:text-white transition" title="LinkedIn">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">🔗 LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Line -->
+    <div class="bg-blue-950 text-center py-4 text-xs text-gray-400">
+      Developed by Web Development Team – University of Swat
+    </div>
+  </footer>
+  
+  <script src="jjs/script.js"></script>
+
+  
+    </body>
+  </html>
+  

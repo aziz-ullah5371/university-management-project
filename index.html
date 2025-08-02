@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <img src="asset/unilogo.png" alt="Logo" class="h-16 w-16">
+          <div>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">University of Swat</h1>
+            <p class="text-xs text-gray-500">Aspiring for Quality Education with Relevance</p>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+    
+        <!-- Nav + Search -->
+        <div id="menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 w-full lg:w-auto lg:ml-auto mt-4 lg:mt-0">
+    
+          <!-- Navigation Links -->
+          <nav class="flex flex-col lg:flex-row items-center gap-3 text-3sm font-bold">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="aboutus.html" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">Admissions</a>
+            <a href="#" class="hover:text-blue-600">Academics</a>
+            <a href="#" class="hover:text-blue-600">News</a>
+            <a href="#" class="hover:text-blue-600">Contact</a>
+          </nav>
+    
+          <!-- Search Bar -->
+          <div class="relative w-full sm:w-60 ">
+            <input type="text" placeholder="Search..."
+              class="w-full border border-black rounded-full px-4 py-1 pl-10 text-sm focus:outline-none
+               focus:ring-2 focus:ring-blue-500 " />
+            <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+                     <!-- Top Navigation with Dropdowns -->
+<nav class="bg-white text-blue-900 text-sm font-medium px-6 py-2 shadow-md border-b-2 border-blue-300 pb-2">
+  <ul class="flex flex-wrap justify-center gap-6 relative">
+    
+    <li class="group relative" id="campus-menu">
+      <button onclick="toggleDropdown()" class="hover:text-blue-600">Campuses</button>
+      <ul id="campus-dropdown" class="absolute hidden bg-white text-left shadow-lg rounded-md mt-2 z-10 w-44">
+        <li><a href="main.html" class="block px-4 py-2 hover:bg-blue-100">Main Campus</a></li>
+        <li><a href="womenc.html" class="block px-4 py-2 hover:bg-blue-100">Women Campus</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Shangla Campus</a></li>
+      </ul>
+    </li>
+    
+    <!-- Faculty -->
+<li class="group relative" id="faculty-menu">
+  <button onclick="toggleFacultyDropdown()" class="hover:text-blue-600">Faculty</button>
+  <ul id="faculty-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-48">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Science & Tech</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Arts & Humanities</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Social Sciences</a></li>
+  </ul>
+</li>
+
+
+  <!-- Administration -->
+<li class="group relative" id="admin-menu">
+  <button onclick="toggleAdminDropdown()" class="hover:text-blue-600">Administration</button>
+  <ul id="admin-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">VC Office</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Registrar</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Treasurer</a></li>
+  </ul>
+</li>
+
+
+
+
+
+
+   <!-- Downloads -->
+  <li><a href="downloads.html" class="hover:text-blue-600">Downloads</a></li>
+
+  <!-- Exam -->
+  <li><a href="exam.html" class="hover:text-blue-600">Exam</a></li>
+
+  <!-- Alumni -->
+  <li><a href="hunerkada.html" class="hover:text-blue-600">Alumni</a></li>
+
+  <!-- YDC -->
+  <li><a href="ydc.html" class="hover:text-blue-600">YDC</a></li>
+
+   <!-- Online Services -->
+<li class="group relative" id="services-menu">
+  <button onclick="toggleServicesDropdown()" class="hover:text-blue-600">Online Services</button>
+  <ul id="services-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">LMS</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Student Portal</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Fee Payment</a></li>
+  </ul>
+</li>
+
+    <!-- Hunerkada -->
+    <li><a href="hunerkada.html" class="hover:text-blue-600">Hunerkada</a></li>
+
+  </ul>
+</nav>
+    </header>  
+ 
+
+
+
+
+
+
+
+    <!-- Hero -->
+    <section class="relative">
+      <img src="asset/uni1.jpeg" alt="Student" class="w-full h-[400px] object-cover">
+      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex items-center justify-center">
+        <div class="text-center text-white">
+          <h2 class="text-4xl font-bold mb-4">Welcome to Our University</h2>
+          <button class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Vice Chancellor's Message -->
+<section class="bg-gray-50 py-12 px-4 md:px-20">
+  <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-blue-300 pb-2">Vice Chancellor’s Message</h2>
+  <div class="flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Image -->
+    <div class="w-full md:w-1/3">
+      <img src="asset/vc2.png" alt="Vice Chancellor" class="w-full h-auto rounded-lg shadow-lg object-cover">
+    </div>
+
+    <!-- Message -->
+    <div class="w-full md:w-2/3">
+      <h3 class="text-xl font-semibold mb-3 text-center">Prof. Dr. Hassan Sher (SAARC Gold Medalist)</h3>
+      <h4 class="text-xl font-semibold mb-3 text-center"></h4>
+      <p class="text-gray-700 text-justify leading-relaxed">
+        Education of modern times hinges around innovation, creativity, and skill development. 
+        Degrees should be supplemented with
+         the value addition of cutting-edge approach, prolific mindset and applied expertise.
+          This purpose can be achieved when a university applies an unorthodox pitch and students accept
+           it with passion.
+           It works both ways. Teachers need to think out of the nutshell of syllabi and students
+            should maneuver to go beyond grades. I am focused to initiate and flourish this 
+            culture at the University of Swat in a bid to make it a center of excellence
+             in Teaching, Research, and its service to local, national and international communities.
+
+      
+      
+    </div>
+
+  </div>
+</section>
+
+
+<!-- University Statistics Section -->
+<section class="bg-gray-100 py-12">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8 text-blue-800">University Statistics</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      <!-- Stat Card -->
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">12,000+</h3>
+        <p class="text-sm text-gray-600 mt-2">Students Enrolled</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">40+</h3>
+        <p class="text-sm text-gray-600 mt-2">Degree Programs</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">10+</h3>
+        <p class="text-sm text-gray-600 mt-2">Faculties</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">300+</h3>
+        <p class="text-sm text-gray-600 mt-2">Faculty Members</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">1,200+</h3>
+        <p class="text-sm text-gray-600 mt-2">Research Publications</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-xl p-4 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-blue-700">25+</h3>
+        <p class="text-sm text-gray-600 mt-2">Global Partnerships</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Admissions -->
+    <section class="py-12 px-4 md:px-20">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold">Admissions</h3>
+        <button id="apply-now-btn" class="bg-red-600 text-white px-5 py-2 rounded hover:bg-red-700">Apply Now</button>
+      </div>
+      <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lrisest accuri/sam.</p>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-gray-100 p-6 rounded text-center">
+          <div class="text-3xl mb-2">📘</div>
+          <h4 class="font-semibold">Academics</h4>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, cons.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded text-center">
+          <div class="text-3xl mb-2">🧪</div>
+          <h4 class="font-semibold">Research</h4>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, cons.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded text-center">
+          <div class="text-3xl mb-2">🛡️</div>
+          <h4 class="font-semibold">Privacy Policy</h4>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, conse.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded text-center">
+          <div class="text-3xl mb-2">🌐</div>
+          <h4 class="font-semibold">Blog</h4>
+          <p class="text-sm text-gray-500">Lorem ipsum dolo sit amet, acr.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="bg-gray-50 px-4 md:px-20 py-12">
+      <h3 class="text-2xl font-bold mb-8">Latest News</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <img src="asset/uni2.jpeg" alt="Campus" class="rounded-lg mb-2">
+          <p class="text-gray-500 text-sm">April 20, 2024</p>
+          <h4 class="font-semibold">University Campus Tour</h4>
+        </div>
+        <div>
+          <img src="asset/uni3.jpg" alt="Online Courses" class="rounded-lg mb-2">
+          <p class="text-gray-500 text-sm">April 18, 2024</p>
+          <h4 class="font-semibold">New Online Courses Available</h4>
+        </div>
+        <div>
+          <img src="asset/uni4.jpg" alt="Studying" class="rounded-lg mb-2">
+          <p class="text-gray-500 text-sm">April 15, 2022</p>
+          <h4 class="font-semibold">Tips for Successful Studying</h4>
+        </div>
+
+      </div>
+      <div class="mt-6">
+        <a href="#" class="text-blue-600 hover:underline text-sm">Read More</a>
+      </div>
+    </section>
+
+
+    <!-- External Links Section -->
+<section class="bg-gray-50 py-10 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Quick Access</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
+      <!-- Facebook -->
+      <a href="https://web.facebook.com/universityofswat/?_rdc=1&_rdr#" target="_blank" class="flex flex-col items-center group hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Facebook" class="w-12 h-12">
+        <span class="mt-2 text-sm font-medium group-hover:text-blue-600">Facebook</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com" target="_blank" class="flex flex-col items-center group hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-12 h-12">
+        <span class="mt-2 text-sm font-medium group-hover:text-blue-600">LinkedIn</span>
+      </a>
+
+      <!-- CMS -->
+      <a href="https://cms.example.com" target="_blank" class="flex flex-col items-center group hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771400.png" alt="CMS" class="w-12 h-12">
+        <span class="mt-2 text-sm font-medium group-hover:text-blue-600">CMS</span>
+      </a>
+
+      <!-- HESSA -->
+      <a href="https://www.hec.gov.pk" target="_blank" class="flex flex-col items-center group hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="HESSA" class="w-12 h-12">
+        <span class="mt-2 text-sm font-medium group-hover:text-blue-600">HESSA</span>
+      </a>
+
+      <!-- SUJRIS -->
+      <a href="https://sujris.example.com" target="_blank" class="flex flex-col items-center group hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="SUJRIS" class="w-12 h-12">
+        <span class="mt-2 text-sm font-medium group-hover:text-blue-600">SUJRIS</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Info & Footer Section -->
+<section class="bg-gray-50 py-12">
+  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-gray-800">
+    
+    <!-- Recent Posts -->
+    <div>
+      <h3 class="text-xl font-bold mb-4 text-blue-800">Recent Posts</h3>
+      <ul class="space-y-2">
+        <li><strong>4th Convocation 2025</strong><br><span class="text-gray-500 text-xs">July 24, 2025</span></li>
+        <li><strong>Digital Transformation of Payment</strong><br><span class="text-gray-500 text-xs">July 23, 2025</span></li>
+        <li><strong>Re-Tender for Procurement of Odoo License</strong><br><span class="text-gray-500 text-xs">July 21, 2025</span></li>
+        <li><strong>International Conference on Bioscience Innovation</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+        <li><strong>Meeting of the Senate 2025</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+      </ul>
+    </div>
+
+    <!-- About Us -->
+    <div>
+      <h3 class="text-xl font-bold mb-4 text-blue-800">About Us</h3>
+      <p class="text-justify text-sm">
+        University of Swat was established for providing higher education to the people of Swat Valley specifically and the whole of the country generally.
+      </p>
+      <p class="text-justify text-sm mt-2">
+        Since its establishment in July 2010, the university has made tremendous progress in academics, research, and infrastructure. Starting with only 7 disciplines, it now offers more than 28 programs.
+      </p>
+    </div>
+
+    <!-- Reach Us -->
+    <div>
+      <h3 class="text-xl font-bold mb-4 text-blue-800">Reach Us</h3>
+      <p class="text-sm">📍 <strong>Main Campus:</strong> Charbagh</p>
+      <p class="text-sm mt-2">University of Swat<br>Charbagh, Swat<br>Khyber Pakhtunkhwa, Pakistan</p>
+    </div>
+
+    <!-- Quick Menu -->
+    <div>
+      <h3 class="text-xl font-bold mb-4 text-blue-800">Quick Menu</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-blue-600">Digital Learning & Skills Enrichment Initiative</a></li>
+        <li><a href="#" class="hover:text-blue-600">About University</a></li>
+        <li><a href="#" class="hover:text-blue-600">Announcements</a></li>
+        <li><a href="#" class="hover:text-blue-600">Jobs</a></li>
+        <li><a href="#" class="hover:text-blue-600">Events</a></li>
+        <li><a href="#" class="hover:text-blue-600">Tender</a></li>
+        <li><a href="#" class="hover:text-blue-600">Political Map of Pakistan</a></li>
+        <li><a href="#" class="hover:text-blue-600">Hunerkada (Art & Culture)</a></li>
+        <li><a href="#" class="hover:text-blue-600">Public Sector Affiliated Colleges</a></li>
+        <li><a href="#" class="hover:text-blue-600">Private Sector Affiliated Colleges</a></li>
+        <li><a href="#" class="hover:text-blue-600">Sub Campuses</a></li>
+        <li><a href="#" class="hover:text-blue-600">Women Campus</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-blue-900 text-white mt-10">
+  <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+
+    <!-- Info Section -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+      <p class="text-lg font-semibold">© 2025 UNIVERSITY OF SWAT</p>
+      <p class="text-gray-300 mt-2">Web Administrator</p>
+      <p class="text-gray-400 text-xs mt-4">Best viewed in Google Chrome</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+      <h3 class="font-bold mb-3 text-white text-lg">Quick Links</h3>
+      <ul class="space-y-1 text-gray-300">
+        <li><a href="#" class="hover:text-white transition">Digital Learning & Skills Enrichment</a></li>
+        <li><a href="#" class="hover:text-white transition">About University</a></li>
+        <li><a href="#" class="hover:text-white transition">Announcements</a></li>
+        <li><a href="#" class="hover:text-white transition">Latest News</a></li>
+        <li><a href="#" class="hover:text-white transition">Jobs</a></li>
+        <li><a href="#" class="hover:text-white transition">Events</a></li>
+        <li><a href="#" class="hover:text-white transition">Tender</a></li>
+        <li><a href="#" class="hover:text-white transition">Political Map of Pakistan</a></li>
+        <li><a href="#" class="hover:text-white transition">Hunerkada (Art & Culture)</a></li>
+        <li><a href="#" class="hover:text-white transition">Public Sector Colleges</a></li>
+        <li><a href="#" class="hover:text-white transition">Private Sector Colleges</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+      <h3 class="font-bold mb-3 text-white text-lg">Follow Us</h3>
+      <div class="flex space-x-4 text-gray-300">
+        <a href="#" class="hover:text-white transition" title="Facebook">
+          <!-- Replace with real icon or SVG -->
+          <span class="text-lg">📘 Facebook</span>
+        </a>
+        <a href="#" class="hover:text-white transition" title="LinkedIn">
+          <!-- Replace with real icon or SVG -->
+          <span class="text-lg">🔗 LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="bg-blue-950 text-center py-4 text-xs text-gray-400">
+    Developed by Web Development Team – University of Swat
+  </div>
+</footer>
+
+
+<script src="jjs/script.js"></script>
+
+  </body>
+</html>

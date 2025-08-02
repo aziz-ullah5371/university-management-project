@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <img src="asset/unilogo.png" alt="Logo" class="h-14 w-14">
+          <div>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">University of Swat</h1>
+            <p class="text-xs text-gray-500">Aspiring for Quality Education with Relevance</p>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+    
+        <!-- Nav + Search -->
+        <div id="menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 w-full lg:w-auto lg:ml-auto mt-4 lg:mt-0">
+    
+          <!-- Navigation Links -->
+          <nav class="flex flex-col lg:flex-row items-center gap-3 text-3sm font-bold">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="#" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">Admissions</a>
+            <a href="#" class="hover:text-blue-600">Academics</a>
+            <a href="#" class="hover:text-blue-600">News</a>
+            <a href="#" class="hover:text-blue-600">Contact</a>
+          </nav>
+    
+          <!-- Search Bar -->
+          <div class="relative w-full sm:w-60">
+            <input type="text" placeholder="Search..."
+              class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+                     <!-- Top Navigation with Dropdowns -->
+<nav class="bg-white text-blue-900 text-sm font-medium px-6 py-2 shadow-md border-b-2 border-blue-300 pb-2">
+  <ul class="flex flex-wrap justify-center gap-6 relative">
+    
+    <li class="group relative" id="campus-menu">
+      <button onclick="toggleDropdown()" class="hover:text-blue-600">Campuses</button>
+      <ul id="campus-dropdown" class="absolute hidden bg-white text-left shadow-lg rounded-md mt-2 z-10 w-44">
+        <li><a href="main.html" class="block px-4 py-2 hover:bg-blue-100">Main Campus</a></li>
+        <li><a href="womenc.html" class="block px-4 py-2 hover:bg-blue-100">Women Campus</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Shangla Campus</a></li>
+      </ul>
+    </li>
+    
+    <!-- Faculty -->
+<li class="group relative" id="faculty-menu">
+  <button onclick="toggleFacultyDropdown()" class="hover:text-blue-600">Faculty</button>
+  <ul id="faculty-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-48">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Science & Tech</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Arts & Humanities</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Social Sciences</a></li>
+  </ul>
+</li>
+
+
+  <!-- Administration -->
+<li class="group relative" id="admin-menu">
+  <button onclick="toggleAdminDropdown()" class="hover:text-blue-600">Administration</button>
+  <ul id="admin-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">VC Office</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Registrar</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Treasurer</a></li>
+  </ul>
+</li>
+
+
+
+
+
+
+   <!-- Downloads -->
+  <li><a href="downloads.html" class="hover:text-blue-600">Downloads</a></li>
+
+  <!-- Exam -->
+  <li><a href="exam.html" class="hover:text-blue-600">Exam</a></li>
+
+  <!-- Alumni -->
+  <li><a href="hunerkada.html" class="hover:text-blue-600">Alumni</a></li>
+
+  <!-- YDC -->
+  <li><a href="ydc.html" class="hover:text-blue-600">YDC</a></li>
+
+   <!-- Online Services -->
+<li class="group relative" id="services-menu">
+  <button onclick="toggleServicesDropdown()" class="hover:text-blue-600">Online Services</button>
+  <ul id="services-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">LMS</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Student Portal</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Fee Payment</a></li>
+  </ul>
+</li>
+
+    <!-- Hunerkada -->
+    <li><a href="hunerkada.html" class="hover:text-blue-600">Hunerkada</a></li>
+
+  </ul>
+</nav>
+    </header>  
+    
+
+    <section class="bg-white py-16 px-6 md:px-20 text-gray-800">
+        <div class="max-w-7xl mx-auto">
+          
+          <!-- Section Header with Logo on Left -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-5 mb-12">
+            <!-- Logo -->
+            <img src="asset/hunerkada-logo.png" alt="Hunerkada Logo" class="h-16 w-auto object-contain">
+      
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900">
+              Hunerkada - Center of Excellence for Art & Culture
+            </h2>
+          </div>
+      
+ 
+      <div class="md:flex items-start gap-10 mb-16">
+        <img src="asset/vicechan1.jpeg" alt="Prof. Dr. Hassan Sher" class="rounded-lg shadow-lg w-full md:w-1/3 mb-6 md:mb-0">
+        <div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-2">Prof. Dr. Hassan Sher</h3>
+          <p class="italic text-sm text-gray-500 mb-2">Vice Chancellor, University of Swat</p>
+          <p class="text-gray-700 leading-relaxed">
+            I am delighted to announce the launch of the Hunerkada Center of Excellence at the University of Swat, marking a significant milestone in our journey towards academic excellence. Initially, we are offering two bachelor's programs: Bachelor of Fine Arts and Bachelor of Design.
+            <br><br>
+            The establishment of Hunerkada Center of Excellence is a testament to our commitment to fostering creativity, innovation, and artistic expression. This center will serve as a hub for art lovers, providing a platform for them to explore their talents and reach new heights.
+            <br><br>
+            I extend my warmest congratulations to the entire team of Hunerkada and staff who have worked tirelessly to make this vision a reality. I also welcome our new students who will be joining us on this exciting journey.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Chairman Message -->
+      <div class="md:flex items-start gap-10 mb-16 flex-row-reverse">
+        <img src="asset/jamalshah.jpg" alt="Prof. Syed Jamal Shah" class="rounded-lg shadow-lg w-full md:w-1/3 mb-6 md:mb-0">
+        <div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-2">Prof. Syed Jamal Shah</h3>
+          <p class="italic text-sm text-gray-500 mb-2">Chairman, Hunerkada, Islamabad — Eminent Artist, Scholar & Educationist</p>
+          <p class="text-gray-700 leading-relaxed">
+            As custodians of the most enviable cultural heritage from Mehergarh to our living culture, we consider art & culture a necessity that enables people to engage with their milieu in an intimate relationship which is both creative and critical.
+            <br><br>
+            The intimacy of this holistic engagement results in authentic knowledge, clarity, empowerment and informed decision making. HUNERKADA considers this engagement as the core of pedagogy and encourages intimate, creative and critical engagement amongst students, teachers and society by promoting healthy enquiries & honest responses.
+            <br><br>
+            We would like to see our HUNERMANDS engaged in meaningful & productive dialogue that complements education, trade, industry, art and culture by lending their skills, knowledge, energy and vision to environment and society as agents of change.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Hunerkada Links Grid -->
+      <div class="grid md:grid-cols-3 gap-8 text-center text-sm">
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Degree Programs</h4>
+          <p class="text-gray-700">Explore BFA and B.Des programs</p>
+        </a>
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Staff</h4>
+          <p class="text-gray-700">Meet the team behind Hunerkada</p>
+        </a>
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Prospectus</h4>
+          <p class="text-gray-700">Download or view the latest prospectus</p>
+        </a>
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Curriculum</h4>
+          <p class="text-gray-700">Details of our academic curriculum</p>
+        </a>
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Latest News</h4>
+          <p class="text-gray-700">Stay updated with Hunerkada events</p>
+        </a>
+        <a href="#" class="bg-blue-100 p-6 rounded-lg shadow hover:bg-blue-200 transition">
+          <h4 class="text-lg font-semibold text-blue-800 mb-2">Contact Us</h4>
+          <p class="text-gray-700">Get in touch with our team</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <<section class="bg-gray-50 py-16 px-6 md:px-20 text-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Hunerkada Staff</h2>
+  
+      <!-- Staff Grid -->
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+        
+        <!-- Staff Member 1 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+          <img src="asset/Amna-Shah-150x150.jpg" alt="Prof. Amna Shah" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-300 shadow">
+          <h3 class="text-xl font-semibold text-blue-800">Ms. Amna-Shah</h3>
+          <p class="text-sm text-gray-600">Chairman, Hunerkada Islamabad</p>
+          <p class="text-xs italic text-gray-500 mt-1">Eminent Artist, Scholar & Educationist</p>
+        </div>
+  
+        <!-- Staff Member 2 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+          <img src="asset/Bashir-Ahmad-150x150.jpg" alt="Prof. Dr. Bashir Ahmad" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-300 shadow">
+          <h3 class="text-xl font-semibold text-blue-800">Prof.Bashir-Ahmad</h3>
+          <p class="text-sm text-gray-600">Vice Chancellor, University of Swat</p>
+          <p class="text-xs italic text-gray-500 mt-1">Visionary Leader & Academic</p>
+        </div>
+  
+        <!-- Staff Member 3 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+          <img src="asset/AttiaZafar-150x150.jpg" alt="Ms. AttiaZafar" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-300 shadow">
+          <h3 class="text-xl font-semibold text-blue-800">Ms. Ayesha Khan</h3>
+          <p class="text-sm text-gray-600">Program Coordinator</p>
+          <p class="text-xs italic text-gray-500 mt-1">Bachelor of Design, Hunerkada</p>
+        </div>     
+  
+      </div>
+    </div>
+  </section>
+  
+  <section id="latest-news" class="bg-white py-16 px-6 md:px-20 text-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Title -->
+      <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Latest News</h2>
+  
+      <div class="grid md:grid-cols-1 gap-8">
+        <!-- News Card 1 -->
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden transition transform hover:scale-105 duration-300">
+          <img src="asset/h2-Image-2024-08-26-at-13.52.03.jpeg" alt="Hunerkada Inauguration" class="w-full object-contain object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2">Hunerkada Inauguration Ceremony</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              The Hunerkada Center of Excellence was inaugurated with notable guests, students, and faculty, marking a major step toward fostering creativity and innovation in the region.
+            </p>
+          </div>
+        </div>
+  
+        <!-- News Card 2 -->
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden transition transform hover:scale-105 duration-300">
+          <img src="asset/h1-Image-2024-08-26-at-13.52.03-1.jpeg" alt="New Degree Programs" class="w-full object-contain object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2">New Art & Design Programs</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Hunerkada now offers Bachelor of Fine Arts and Bachelor of Design. These programs are tailored to help students become creative professionals and cultural change-makers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="degree-programs" class="bg-gray-50 py-16 px-6 md:px-20 text-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Title -->
+      <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Hunerkada Degree Programs</h2>
+  
+      <div class="grid md:grid-cols-2 gap-10">
+        
+        <!-- BFA Program -->
+        <div class="bg-white shadow-lg rounded-xl p-6 border border-blue-100">
+          <h3 class="text-2xl font-semibold text-blue-800 mb-4">Bachelor of Fine Arts (BFA)</h3>
+          <p class="text-gray-700 mb-2">4-Year Degree Programme with specialization in:</p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Paintings</li>
+            <li>Printmaking</li>
+            <li>Miniature Painting</li>
+            <li>Sculpture / 3-D Art</li>
+          </ul>
+        </div>
+  
+        <!-- BDes Program -->
+        <div class="bg-white shadow-lg rounded-xl p-6 border border-blue-100">
+          <h3 class="text-2xl font-semibold text-blue-800 mb-4">Bachelor of Design (BDes)</h3>
+          <p class="text-gray-700 mb-2">4-Year Degree Programme with specialization in:</p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Textile & Fashion Design</li>
+            <li>Ceramics Design</li>
+            <li>Visual Communication Design (Graphic Design)</li>
+            <li>Product Design</li>
+            <li>Interior Design</li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- Contact Us Section -->
+<section class="bg-blue-50 py-16 px-6 md:px-20 text-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-blue-900 mb-10">Contact Us</h2>
+  
+      <div class="bg-white shadow-xl rounded-xl p-8 md:p-12 space-y-8">
+        <!-- Info Box -->
+        <p class="text-lg text-gray-700">
+          For inquiries about programs, faculty, or collaborations, feel free to reach us:
+        </p>
+  
+        <div class="flex flex-col md:flex-row justify-center items-center gap-12 text-left md:text-center">
+  
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <i class="fas fa-envelope text-blue-800 text-2xl"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-blue-800">Email</h3>
+              <a href="mailto:hunerkada@uswat.edu.pk" class="text-gray-700 hover:text-blue-600 hover:underline">
+                hunerkada@uswat.edu.pk
+              </a>
+            </div>
+          </div>
+  
+          <!-- Phone -->
+          <div class="flex items-center gap-4">
+            <i class="fas fa-phone-alt text-blue-800 text-2xl"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-blue-800">Phone</h3>
+              <a href="tel:+92946920876" class="text-gray-700 hover:text-blue-600 hover:underline">
+                +92-946-920876
+              </a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+    
+
+    <!-- Info & Footer Section -->
+<section class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-gray-800">
+      
+      <!-- Recent Posts -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Recent Posts</h3>
+        <ul class="space-y-2">
+          <li><strong>4th Convocation 2025</strong><br><span class="text-gray-500 text-xs">July 24, 2025</span></li>
+          <li><strong>Digital Transformation of Payment</strong><br><span class="text-gray-500 text-xs">July 23, 2025</span></li>
+          <li><strong>Re-Tender for Procurement of Odoo License</strong><br><span class="text-gray-500 text-xs">July 21, 2025</span></li>
+          <li><strong>International Conference on Bioscience Innovation</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+          <li><strong>Meeting of the Senate 2025</strong><br><span class="text-gray-500 text-xs">July 17, 2025</span></li>
+        </ul>
+      </div>
+  
+      <!-- About Us -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">About Us</h3>
+        <p class="text-justify text-sm">
+          University of Swat was established for providing higher education to the people of Swat Valley specifically and the whole of the country generally.
+        </p>
+        <p class="text-justify text-sm mt-2">
+          Since its establishment in July 2010, the university has made tremendous progress in academics, research, and infrastructure. Starting with only 7 disciplines, it now offers more than 28 programs.
+        </p>
+      </div>
+  
+      <!-- Reach Us -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Reach Us</h3>
+        <p class="text-sm">📍 <strong>Main Campus:</strong> Charbagh</p>
+        <p class="text-sm mt-2">University of Swat<br>Charbagh, Swat<br>Khyber Pakhtunkhwa, Pakistan</p>
+      </div>
+  
+      <!-- Quick Menu -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-blue-800">Quick Menu</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-600">Digital Learning & Skills Enrichment Initiative</a></li>
+          <li><a href="#" class="hover:text-blue-600">About University</a></li>
+          <li><a href="#" class="hover:text-blue-600">Announcements</a></li>
+          <li><a href="#" class="hover:text-blue-600">Jobs</a></li>
+          <li><a href="#" class="hover:text-blue-600">Events</a></li>
+          <li><a href="#" class="hover:text-blue-600">Tender</a></li>
+          <li><a href="#" class="hover:text-blue-600">Political Map of Pakistan</a></li>
+          <li><a href="#" class="hover:text-blue-600">Hunerkada (Art & Culture)</a></li>
+          <li><a href="#" class="hover:text-blue-600">Public Sector Affiliated Colleges</a></li>
+          <li><a href="#" class="hover:text-blue-600">Private Sector Affiliated Colleges</a></li>
+          <li><a href="#" class="hover:text-blue-600">Sub Campuses</a></li>
+          <li><a href="#" class="hover:text-blue-600">Women Campus</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="bg-blue-900 text-white mt-10">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+  
+      <!-- Info Section -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="text-lg font-semibold">© 2025 UNIVERSITY OF SWAT</p>
+        <p class="text-gray-300 mt-2">Web Administrator</p>
+        <p class="text-gray-400 text-xs mt-4">Best viewed in Google Chrome</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Quick Links</h3>
+        <ul class="space-y-1 text-gray-300">
+          <li><a href="#" class="hover:text-white transition">Digital Learning & Skills Enrichment</a></li>
+          <li><a href="#" class="hover:text-white transition">About University</a></li>
+          <li><a href="#" class="hover:text-white transition">Announcements</a></li>
+          <li><a href="#" class="hover:text-white transition">Latest News</a></li>
+          <li><a href="#" class="hover:text-white transition">Jobs</a></li>
+          <li><a href="#" class="hover:text-white transition">Events</a></li>
+          <li><a href="#" class="hover:text-white transition">Tender</a></li>
+          <li><a href="#" class="hover:text-white transition">Political Map of Pakistan</a></li>
+          <li><a href="#" class="hover:text-white transition">Hunerkada (Art & Culture)</a></li>
+          <li><a href="#" class="hover:text-white transition">Public Sector Colleges</a></li>
+          <li><a href="#" class="hover:text-white transition">Private Sector Colleges</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Follow Us</h3>
+        <div class="flex space-x-4 text-gray-300">
+          <a href="#" class="hover:text-white transition" title="Facebook">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">📘 Facebook</span>
+          </a>
+          <a href="#" class="hover:text-white transition" title="LinkedIn">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">🔗 LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Line -->
+    <div class="bg-blue-950 text-center py-4 text-xs text-gray-400">
+      Developed by Web Development Team – University of Swat
+    </div>
+  </footer>
+  
+  
+  <script src="jjs/script.js"></script>
+
+  
+    </body>
+  </html>
+  

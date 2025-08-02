@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <img src="asset/unilogo.png" alt="Logo" class="h-14 w-14">
+          <div>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">University of Swat</h1>
+            <p class="text-xs text-gray-500">Aspiring for Quality Education with Relevance</p>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+    
+        <!-- Nav + Search -->
+        <div id="menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 w-full lg:w-auto lg:ml-auto mt-4 lg:mt-0">
+    
+          <!-- Navigation Links -->
+          <nav class="flex flex-col lg:flex-row items-center gap-3 text-3sm font-bold">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="aboutus.html" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">Admissions</a>
+            <a href="#" class="hover:text-blue-600">Academics</a>
+            <a href="#" class="hover:text-blue-600">News</a>
+            <a href="#" class="hover:text-blue-600">Contact</a>
+          </nav>
+    
+          <!-- Search Bar -->
+          <div class="relative w-full sm:w-60">
+            <input type="text" placeholder="Search..."
+              class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+                      <!-- Top Navigation with Dropdowns -->
+<nav class="bg-white text-blue-900 text-sm font-medium px-6 py-2 shadow-md border-b-2 border-blue-300 pb-2">
+  <ul class="flex flex-wrap justify-center gap-6 relative">
+    
+    <li class="group relative" id="campus-menu">
+      <button onclick="toggleDropdown()" class="hover:text-blue-600">Campuses</button>
+      <ul id="campus-dropdown" class="absolute hidden bg-white text-left shadow-lg rounded-md mt-2 z-10 w-44">
+        <li><a href="main.html" class="block px-4 py-2 hover:bg-blue-100">Main Campus</a></li>
+        <li><a href="womenc.html" class="block px-4 py-2 hover:bg-blue-100">Women Campus</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Shangla Campus</a></li>
+      </ul>
+    </li>
+    
+    <!-- Faculty -->
+<li class="group relative" id="faculty-menu">
+  <button onclick="toggleFacultyDropdown()" class="hover:text-blue-600">Faculty</button>
+  <ul id="faculty-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-48">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Science & Tech</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Arts & Humanities</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Social Sciences</a></li>
+  </ul>
+</li>
+
+
+  <!-- Administration -->
+<li class="group relative" id="admin-menu">
+  <button onclick="toggleAdminDropdown()" class="hover:text-blue-600">Administration</button>
+  <ul id="admin-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">VC Office</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Registrar</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Treasurer</a></li>
+  </ul>
+</li>
+
+
+
+
+
+
+   <!-- Downloads -->
+  <li><a href="downloads.html" class="hover:text-blue-600">Downloads</a></li>
+
+  <!-- Exam -->
+  <li><a href="exam.html" class="hover:text-blue-600">Exam</a></li>
+
+  <!-- Alumni -->
+  <li><a href="hunerkada.html" class="hover:text-blue-600">Alumni</a></li>
+
+  <!-- YDC -->
+  <li><a href="ydc.html" class="hover:text-blue-600">YDC</a></li>
+
+   <!-- Online Services -->
+<li class="group relative" id="services-menu">
+  <button onclick="toggleServicesDropdown()" class="hover:text-blue-600">Online Services</button>
+  <ul id="services-dropdown" class="absolute hidden bg-white shadow-lg rounded-md mt-2 z-10 w-52">
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">LMS</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Student Portal</a></li>
+    <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Fee Payment</a></li>
+  </ul>
+</li>
+
+    <!-- Hunerkada -->
+    <li><a href="hunerkada.html" class="hover:text-blue-600">Hunerkada</a></li>
+
+  </ul>
+</nav>
+    </header>  
+    
+      
+    
+      <section class="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <h2 class="text-4xl font-bold text-center text-blue-900 mb-10">Examination Section</h2>
+        
+            <!-- Skip Navigation Links -->
+            <h3 class="text-xl font-semibold justify-center text-blue-800 mb-4">Quick Navigation</h3>
+            <nav class="mb-6 flex flex-wrap justify-center gap-4 text-blue-700 font-semibold bg-black p-4 rounded-lg shadow-md">
+                <a href="index.html" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Downloads</a>
+                <a href="#" class="hover:underline">Result</a>
+                <a href="#" class="hover:underline">Notifications</a>
+                <a href="#" class="hover:underline">Datesheets</a>
+                <a href="#" class="hover:underline">Dues List</a>
+                <a href="#" class="hover:underline">Roll No.</a>
+                <a href="#" class="hover:underline">Fee</a>
+            </nav>
+      
+          <!-- Annual System Result -->
+          <div class="mb-10">
+            <h3 class="text-2xl font-semibold text-blue-900 mb-4">Annual System Result</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Result Master Supplementary Examination 2024</li>
+              <li>B.A/B.Sc (Part-I & II), Supplementary Examination 2024</li>
+            </ul>
+          </div>
+      
+          <!-- Semester System Results -->
+          <div class="mb-10">
+            <h3 class="text-2xl font-semibold text-blue-900 mb-4">Semester System Results</h3>
+      
+            <!-- Government Jahanzeb PG College -->
+            <div class="mb-6">
+              <h4 class="text-xl font-semibold text-blue-700 mb-2">Govt Jahanzeb PG College Saidu Sharif, Swat</h4>
+              <ul class="list-disc pl-6 grid md:grid-cols-2 gap-x-8 gap-y-2">
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Archaeology 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Botany 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Chemistry 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Computer Science 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Economics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Electronics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS English 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS History 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS HPE 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Islamic Studies 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Mathematics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Pakistan Studies 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Pashto 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Physics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Political Science 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Sociology 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Statistics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Urdu 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Zoology 2024-28</a></li>
+              </ul>
+            </div>
+      
+            <!-- Government Afzal Khan Lala PG College -->
+            <div class="mb-6">
+              <h4 class="text-xl font-semibold text-blue-700 mb-2">Govt Afzal Khan Lala PG College, Matta, Swat</h4>
+              <ul class="list-disc pl-6 grid md:grid-cols-2 gap-x-8 gap-y-2"></ul>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Botany 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Chemistry 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Computer Science 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Economics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS English 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Islamic Studies 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Physics 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">BS Zoology 2024-28</a></li>
+                </ul>
+            </div>
+      
+            <!-- Other Colleges -->
+            <div class="mb-6">
+              <h4 class="text-xl font-semibold text-blue-700 mb-2">Other Colleges</h4>
+              <ul class="list-disc pl-6 grid md:grid-cols-2 gap-x-8 gap-y-2 max-h-[500px] overflow-y-auto">
+                    <li><a href="#" class="text-blue-600 hover:underline">Al Madina Model School & College - BS English 2024-28</a></li>
+                   <li><a href="#" class="text-blue-600 hover:underline">Sirat Ul Jannat College Swat - BS Islamic Studies</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">SECOMS - BS Physics, Zoology, English, CS</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">Kabal Education Academy - BS English</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">Jinnah College of Modern Studies Kabal - BS English, CS</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GGDC Saidu Sharif Swat - BS Psych, Botany, Chem, English, Islamic Studies, Maths, Pol. Sci, ZoologyB</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GGDC Matta - BS Chemistry</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GGDC Madyan - BS English, Zoology</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GGDC Khwaza Khela - BS Chemistry</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GGDC Barikot - BS English, Urdu</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Saidu Sharif Swat - BS CS</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Puran Shangla - BS Zoology, Botany</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Mingora Swat - BS Chemistry, Physics8</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Madyan & Madayan - BS CS, Chemistry, English, Microbiology</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Khwaza Khela Swat - BS English 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Kabal - BS CS, Botany, Physics, Urdu, Zoology</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GDC Alpurai & Shangla - BS Pakistan Studies, Physics, Urdu</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GCMS Besham Shangla - BBA 2024-28</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">GCMS Sangota - BS Commerce(Hons), BS CS, BBA(Hons)</a></li>
+                  </ul>
+            </div>
+          </div>
+      
+          <!-- Footer -->
+          <div class="text-center text-sm text-gray-500 mt-12 pt-6 border-t">
+            <p>&copy; 2014 - 2025 University of Swat, Khyber Pakhtunkhwa, Pakistan</p>
+            <p>Website Last Updated on: <strong>16/04/2025</strong></p>
+            <p>Website Maintained by: <strong>Directorate of IT, University of Swat</strong></p>
+          </div>
+        </div>
+      </section>
+
+  <footer class="bg-blue-900 text-white mt-10">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+  
+      <!-- Info Section -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="text-lg font-semibold">© 2025 UNIVERSITY OF SWAT</p>
+        <p class="text-gray-300 mt-2">Web Administrator</p>
+        <p class="text-gray-400 text-xs mt-4">Best viewed in Google Chrome</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Quick Links</h3>
+        <ul class="space-y-1 text-gray-300">
+          <li><a href="#" class="hover:text-white transition">Digital Learning & Skills Enrichment</a></li>
+          <li><a href="#" class="hover:text-white transition">About University</a></li>
+          <li><a href="#" class="hover:text-white transition">Announcements</a></li>
+          <li><a href="#" class="hover:text-white transition">Latest News</a></li>
+          <li><a href="#" class="hover:text-white transition">Jobs</a></li>
+          <li><a href="#" class="hover:text-white transition">Events</a></li>
+          <li><a href="#" class="hover:text-white transition">Tender</a></li>
+          <li><a href="#" class="hover:text-white transition">Political Map of Pakistan</a></li>
+          <li><a href="#" class="hover:text-white transition">Hunerkada (Art & Culture)</a></li>
+          <li><a href="#" class="hover:text-white transition">Public Sector Colleges</a></li>
+          <li><a href="#" class="hover:text-white transition">Private Sector Colleges</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="font-bold mb-3 text-white text-lg">Follow Us</h3>
+        <div class="flex space-x-4 text-gray-300">
+          <a href="#" class="hover:text-white transition" title="Facebook">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">📘 Facebook</span>
+          </a>
+          <a href="#" class="hover:text-white transition" title="LinkedIn">
+            <!-- Replace with real icon or SVG -->
+            <span class="text-lg">🔗 LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Line -->
+    <div class="bg-blue-950 text-center py-4 text-xs text-gray-400">
+      Developed by Web Development Team – University of Swat
+    </div>
+  </footer>
+  
+  <script src="jjs/script.js"></script>
+
+  
+    </body>
+  </html>
+  
